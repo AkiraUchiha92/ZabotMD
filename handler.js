@@ -629,7 +629,14 @@ export async function participantsUpdate({ id, participants, action }) {
                         pp = await this.profilePictureUrl(user, 'image')
                     } catch (e) {
                     } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'unknow') :
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', await this.getName(id)).replace('𝙅𝙖𝙣𝙜𝙖𝙣 𝙡𝙪𝙥𝙖 𝙞𝙣𝙩𝙧𝙤 𝙠𝙖𝙠 𝘽𝙞𝙖𝙧 𝙠𝙚𝙣𝙖𝙡 🤗
+	
+➺ 📝 𝖭𝖺𝗆𝖺 :
+➺ 📆 𝖴𝗆𝗎𝗋 :
+➺ ⚧️ 𝖦𝖾𝗇𝖽𝖾𝗋 :
+➺ 🏘️ 𝖠𝗌𝗄𝗈𝗍 :
+
+╰❒ 𝖯𝖺𝗍𝗎𝗁𝗂 𝗋𝗎𝗅𝖾𝗌 𝗀𝗋𝗎𝗉 𝗒𝖺 𝗄𝖺k ~') :
                             (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
                             let apii = await this.getFile(pp)
                             this.sendButton(id, text, groupMetadata.subject, apii.data, [[(action == 'add' ? 'WELCOME 🔥' : 'BYE 🔥'), 'ura']], '',  { mentions: [user], asLocation: true })
