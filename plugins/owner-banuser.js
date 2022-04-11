@@ -11,6 +11,6 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['ban']
 handler.tags = ['owner']
 handler.command = /^ban$/i
-handler.rowner = true
+handler.owner = true
 
 export default handler
