@@ -9,5 +9,6 @@ handler.tags = ['owner', 'group']
 handler.command = /^banchat$/i
 
 handler.admin = true
+handler.owner = true
 
 export default handler
