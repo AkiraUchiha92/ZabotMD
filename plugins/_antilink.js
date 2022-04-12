@@ -11,9 +11,13 @@ export async function before(m, { isAdmin, isBotAdmin }) {
     if (chat.antiLink && isGroupLink && !isAdmin) {
         if (isBotAdmin) {
             const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
+            const linkThisGroup = `https://s.lazada.co.id/${await this.groupInviteCode(m.chat)}`
+            const linkThisGroup = `https://shp.ee/${await this.groupInviteCode(m.chat)}`
+            const linkThisGroup = `https://makmur-referral.onelink.me/${await this.groupInviteCode(m.chat)}`
+            const linkThisGroup = `https://wa.me/${await this.groupInviteCode(m.chat)}`
             if (m.text.includes(linkThisGroup)) return !0
         }
-        await conn.sendButton(m.chat, `*Group link detect!*${isBotAdmin ? '' : '\n\n_Bot not admin_  t_t'}`, author, ['off antilink', '/disable antilink'], m)
+        await conn.sendButton(m.chat, `*☠️Link Terdeteksi Ada akan Dikick!*${isBotAdmin ? '' : '\n\n_Bot not admin_  t_t'}`, author, ['off antilink', '/disable antilink'], m)
         if (isBotAdmin && bot.restrict) {
             await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         } else if (!bot.restrict) return m.reply('Owner disable auto kick!')
