@@ -160,7 +160,7 @@ global.reloadHandler = async function (restatConn) {
   }
 
   conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject\nJANGAN LUPA INTRO \n🔹nama : \n🔹UMUR : \n🔹GENDER : \n🔹ASKOT : \n\n```JANGAN LUPA BACA DESKRIPSI```'
-  conn.bye = 'Kok pergi kak @user! \nJejaknya jan lupa dihapus yaa!!'
+  conn.bye = 'Kok pergi kak @user! \n\n Udah izin belum? \n Nanti disantet Lohhhh!!'
   conn.spromote = '@user sekarang admin!'
   conn.sdemote = '@user sekarang bukan admin!'
   conn.sDesc = 'Deskripsi telah diubah ke \n@desc'
